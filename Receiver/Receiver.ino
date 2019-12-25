@@ -21,12 +21,11 @@ void setup()
     
   esp_now_register_recv_cb([](uint8_t *mac, uint8_t *data, uint8_t len)
   {
-      Serial.printf("Got Something length =\t%i", len);
+      Serial.printf("Got Something length =%i\tdata=%i\n", len,data[0]);
   });
 }
 
 void loop()
 {
-  
+  yield();
 }
-
